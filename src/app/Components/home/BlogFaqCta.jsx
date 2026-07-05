@@ -195,7 +195,7 @@ export default function BlogFaqCta() {
             </h2>
             <Link href="/blog" style={{ fontSize: '11px', color: '#fff', padding: '0.7rem 2rem', background: 'var(--gold)', fontWeight: 700, textDecoration: 'none', letterSpacing: '0.12em', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>All Articles →</Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="blog-cards-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
             <Link href={BLOGS[0].href} style={{ textDecoration: 'none' }}>
               <div
                 style={{ borderRadius: '1px', overflow: 'hidden', background: '#223362', border: '1px solid rgba(255,255,255,0.06)', height: '300px', transition: 'all .25s', display: 'flex', flexDirection: 'column' }}
@@ -241,8 +241,8 @@ export default function BlogFaqCta() {
 
       {/* FAQ — cream */}
       <div className="section-light" style={{ padding: '4rem 2rem' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '6rem', alignItems: 'start' }}>
-          <div style={{ position: 'sticky', top: '6rem' }}>
+        <div className="faq-split-grid" style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '6rem', alignItems: 'start' }}>
+          <div className="faq-split-sidebar" style={{ position: 'sticky', top: '6rem' }}>
             <Label className="font-bold">Questions</Label>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(34px, 3.8vw, 54px)', fontWeight: 700, color: '#1B2A4A', letterSpacing: '-0.02em', lineHeight: 1.12, marginBottom: '1.5rem' }}>
               Frequently Asked

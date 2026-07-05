@@ -26,8 +26,8 @@ export default function ServicesAndProcess() {
       {/* SERVICES — cream bg */}
       <div className="section-light" style={{ padding: '7rem 2rem' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '5rem', alignItems: 'start' }}>
-            <div style={{ position: 'sticky', top: '6rem' }}>
+          <div className="services-split-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '5rem', alignItems: 'start' }}>
+            <div className="services-split-sidebar" style={{ position: 'sticky', top: '6rem' }}>
               <Label light>What We Offer</Label>
               <SectionHeading light>
                 Our<br />Services
@@ -42,6 +42,7 @@ export default function ServicesAndProcess() {
               {SERVICES.map((s, i) => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', display: 'block' }}>
                   <div
+                    className="service-row-grid"
                     style={{
                       padding: '2rem 0',
                       borderBottom: '1px solid rgba(28,26,23,0.12)',
@@ -83,8 +84,8 @@ export default function ServicesAndProcess() {
           }}>
             How It Works
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0', position: 'relative' }}>
-            <div style={{ position: 'absolute', top: '1.5rem', left: '12.5%', right: '12.5%', height: '1px', background: 'var(--gold)', opacity: 0.15 }} />
+          <div className="process-steps-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0', position: 'relative' }}>
+            <div className="process-steps-line" style={{ position: 'absolute', top: '1.5rem', left: '12.5%', right: '12.5%', height: '1px', background: 'var(--gold)', opacity: 0.15 }} />
             {PROCESS.map((p) => (
               <div key={p.title} style={{ padding: '0 2rem 0 0' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.75rem' }}>

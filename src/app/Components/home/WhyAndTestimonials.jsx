@@ -22,7 +22,7 @@ export default function WhyAndTestimonials() {
       <div className="section-light" style={{ padding: '7rem 2rem' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
           <Label light>Why Choose SRC Global</Label>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start', marginBottom: '4rem' }}>
+          <div className="why-heading-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start', marginBottom: '4rem' }}>
             <SectionHeading light>
               Every decision counts.<br />
               <em>Every second matters.</em>
@@ -31,9 +31,9 @@ export default function WhyAndTestimonials() {
               SRC Global is India's most trusted compliance partner — 12+ years, 10,000+ certifications, and a 0% first-attempt failure rate. We exist to make regulatory compliance fast, reliable, and completely stress-free.
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0' }}>
+          <div className="stats-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0' }}>
             {WHY.map((f, i) => (
-              <div key={f.title} style={{
+              <div key={f.title} className="stats-grid-4-item" style={{
                 padding: '2.5rem 2rem',
                 borderRight: i < 3 ? '1px solid rgba(28,26,23,0.1)' : 'none',
                 borderTop: '2px solid var(--gold-dark)',
