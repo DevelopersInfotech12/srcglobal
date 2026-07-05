@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 import { useTheme } from '../lib/ThemeContext';
 
 const NAV_LINKS = [
@@ -24,7 +25,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
+    <div style={{ position: 'sticky', top: 0, zIndex: 100 }}>
       {/* Announcement ticker — Taleo style */}
       <div
         style={{
@@ -51,10 +52,7 @@ export default function Navbar() {
       {/* Main navbar */}
       <nav
         style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 100,
-          background: scrolled ? '#ffffff' : '#ffffff',
+          background: '#ffffff',
           borderBottom: `1px solid var(--border-subtle)`,
           boxShadow: scrolled ? 'var(--shadow-md)' : 'none',
           transition: 'box-shadow .3s',
@@ -73,17 +71,11 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            {/* Shield icon */}
-            <svg width="32" height="36" viewBox="0 0 32 36" fill="none">
-              <path d="M16 1L2 7v12c0 8.3 5.9 16.1 14 18.4C24.1 35.1 30 27.3 30 19V7L16 1z"
-                fill="var(--gold)" fillOpacity=".15" stroke="var(--gold)" strokeWidth="1.5" />
-              <path d="M10 17l4 4 8-8" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <Image src="/logo.png" alt="SRC Global logo" width={76} height={76} priority />
             <div>
               <div style={{ fontWeight: 700, fontSize: '24px', color: '#222222', lineHeight: 1.1 }}>
                 SRC Global
               </div>
-          
             </div>
           </Link>
 
@@ -203,6 +195,6 @@ export default function Navbar() {
           .show-mobile { display: none !important; }
         }
       `}</style>
-    </>
+    </div>
   );
 }

@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const SERVICES = [
@@ -30,11 +31,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
-            <svg width="28" height="32" viewBox="0 0 32 36" fill="none">
-              <path d="M16 1L2 7v12c0 8.3 5.9 16.1 14 18.4C24.1 35.1 30 27.3 30 19V7L16 1z"
-                fill="var(--gold)" fillOpacity=".2" stroke="var(--gold)" strokeWidth="1.5" />
-              <path d="M10 17l4 4 8-8" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+           <Image src="/logo.png" alt="SRC Global logo" width={76} height={76} priority />
             <div>
               <div style={{ fontWeight: 700, fontSize: '22px', color: '#fff' }}>SRC Global</div>
             </div>

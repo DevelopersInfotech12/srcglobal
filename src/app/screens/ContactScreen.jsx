@@ -100,7 +100,7 @@ export default function ContactScreen() {
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: "clamp(34px, 2.5vw, 30px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.12, color: 'var(--text-primary)', marginBottom: '2rem' }}>Contact Information</h2>
             {[
               { icon: '📞', label: 'Phone / WhatsApp', values: ['+91-9891229135', '+91-9540190334'] },
-              { icon: '✉', label: 'Email', values: ['starindia.acc@gmail.com'] },
+              { icon: '✉', label: 'Email', values: ['✉ starindia.acc@gmail.com'] },
 
               {
                 icon: '📍',
@@ -110,8 +110,6 @@ export default function ContactScreen() {
                   'Rohini Sector 21, New Delhi - 110086'
                 ]
               },
-
-
               { icon: '🕐', label: 'Working Hours', values: ['Mon–Sat: 9:00 AM – 6:00 PM', '24/7 WhatsApp Support'] },
             ].map(c => (
               <div key={c.label} style={{ display: 'flex', gap: '1.25rem', marginBottom: '2rem' }}>
