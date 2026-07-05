@@ -103,7 +103,7 @@ export default function Navbar() {
                   transition: 'color .2s',
                 }}
                 onMouseEnter={e => e.target.style.color = 'var(--gold)'}
-                onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}
+                onMouseLeave={e => e.target.style.color = '#464545'}
               >
                 {l.label}
               </Link>
@@ -112,26 +112,6 @@ export default function Navbar() {
 
           {/* Right actions */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            {/* Theme toggle */}
-            <button
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-              style={{
-                background: 'none',
-                border: '1px solid var(--border)',
-                borderRadius: '50%',
-                width: '36px',
-                height: '36px',
-                cursor: 'pointer',
-                color: 'var(--text-secondary)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '14px',
-              }}
-            >
-              {theme === 'dark' ? '☀' : '◑'}
-            </button>
 
             {/* CTA */}
             <Link
@@ -159,7 +139,7 @@ export default function Navbar() {
               aria-label="Menu"
               style={{
                 background: 'none', border: 'none', cursor: 'pointer',
-                color: 'var(--text-primary)', fontSize: '20px',
+                color: '#1B2A4A', fontSize: '20px',
                 display: 'none',
               }}
               className="show-mobile"
@@ -189,10 +169,10 @@ export default function Navbar() {
                 style={{
                   fontSize: '15px',
                   fontWeight: 500,
-                  color: 'var(--text-primary)',
+                  color: '#1B2A4A',
                   textDecoration: 'none',
                   padding: '8px 0',
-                  borderBottom: '1px solid var(--border-subtle)',
+                  borderBottom: '1px solid rgba(27,42,74,0.12)',
                 }}
               >
                 {l.label}

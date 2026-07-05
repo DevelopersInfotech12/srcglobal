@@ -125,7 +125,7 @@ export default function HeroSection() {
 
             {/* Pills row — each has its own color, active = full opacity, inactive = 55% opacity */}
             <div
-              className="flex flex-wrap items-center gap-1.5 rounded-t-2xl px-3 py-3"
+              className="grid grid-cols-4 gap-1 rounded-t-2xl px-2 py-2 sm:flex sm:flex-wrap sm:items-center sm:gap-1.5 sm:px-3 sm:py-3"
               style={{ background: COLORS.surface, border: `1px solid ${COLORS.border}`, borderBottom: "none" }}
             >
               {services.map((s, i) => {
@@ -138,7 +138,7 @@ export default function HeroSection() {
                     onClick={() => goTo(i)}
                     onMouseEnter={() => setHoveredPill(i)}
                     onMouseLeave={() => setHoveredPill(null)}
-                    className="flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold"
+                    className="flex items-center justify-center gap-1 rounded-md px-1.5 py-1 text-[9px] font-bold sm:rounded-lg sm:px-3 sm:py-1.5 sm:text-xs sm:gap-1.5"
                     style={{
                       background: sc.bg,
                       color: sc.text,
@@ -150,8 +150,8 @@ export default function HeroSection() {
                       // fontFamily: 'var(--font-body)'
                     }}
                   >
-                    <span className="text-sm leading-none">{s.icon}</span>
-                    <span className="font-display">{s.name}</span>
+                    <span className="text-xs leading-none sm:text-sm">{s.icon}</span>
+                    <span className="font-display truncate">{s.name}</span>
                   </button>
                 );
               })}
