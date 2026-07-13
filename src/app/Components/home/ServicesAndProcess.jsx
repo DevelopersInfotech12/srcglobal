@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { Label, GoldBtn, Divider, SectionHeading } from './HomeAtoms';
 
 const SERVICES = [
-  { title: 'BIS — CRS', sub: 'Compulsory Registration Scheme', desc: 'Mandatory for 70+ electronics & IT product categories. Lab coordination, portal filing, follow-up handled end-to-end.', weeks: '4–8 weeks', href: '/services/bis' },
-  { title: 'EPR', sub: 'Extended Producer Responsibility', desc: 'E-waste, plastics & battery EPR registration with CPCB. Full documentation and annual compliance reporting.', weeks: '3–6 weeks', href: '/services/epr' },
-  { title: 'WPC — ETA', sub: 'Wireless Equipment Type Approval', desc: 'For Wi-Fi, Bluetooth, GPS and all wireless devices. Lab testing to WPC portal — fully managed.', weeks: '6–10 weeks', href: '/services/wpc' },
-  { title: 'TEC / MTCTE', sub: 'Telecom Equipment Certification', desc: 'Mandatory under DoT for telecom products. Portal coordination, lab liaison, compliance review.', weeks: '8–12 weeks', href: '/services/tec' },
-  { title: 'BEE', sub: 'Bureau of Energy Efficiency', desc: 'Star labelling and mandatory registration for energy-consuming products across 24+ categories.', weeks: '4–8 weeks', href: '/services/bee' },
-  { title: 'LMPC', sub: 'Legal Metrology Packaged Commodities', desc: 'Import licence and product label compliance under Legal Metrology Act for importers.', weeks: '2–4 weeks', href: '/services/lmpc' },
-  { title: 'ISO Certification', sub: 'ISO 9001 / 14001 / 45001', desc: 'International management system certification. Documentation, audits, certification body liaison.', weeks: '8–16 weeks', href: '/services/iso' },
-  { title: 'CDSCO', sub: 'Drug & Medical Device License', desc: 'Registration of medical devices, drugs and cosmetics under CDSCO / MDR 2017.', weeks: '12–20 weeks', href: '/services/cdsco' },
+  { title: 'BIS — CRS', sub: 'Compulsory Registration Scheme', desc: 'Mandatory for 70+ electronics & IT product categories. Lab coordination, portal filing, follow-up handled end-to-end.', weeks: '4–8 weeks', href: '/services' },
+  { title: 'EPR', sub: 'Extended Producer Responsibility', desc: 'E-waste, plastics & battery EPR registration with CPCB. Full documentation and annual compliance reporting.', weeks: '3–6 weeks', href: '/services' },
+  { title: 'WPC — ETA', sub: 'Wireless Equipment Type Approval', desc: 'For Wi-Fi, Bluetooth, GPS and all wireless devices. Lab testing to WPC portal — fully managed.', weeks: '6–10 weeks', href: '/services' },
+  { title: 'TEC / MTCTE', sub: 'Telecom Equipment Certification', desc: 'Mandatory under DoT for telecom products. Portal coordination, lab liaison, compliance review.', weeks: '8–12 weeks', href: '/services' },
+  { title: 'BEE', sub: 'Bureau of Energy Efficiency', desc: 'Star labelling and mandatory registration for energy-consuming products across 24+ categories.', weeks: '4–8 weeks', href: '/services' },
+  { title: 'LMPC', sub: 'Legal Metrology Packaged Commodities', desc: 'Import licence and product label compliance under Legal Metrology Act for importers.', weeks: '2–4 weeks', href: '/services' },
+  { title: 'ISO Certification', sub: 'ISO 9001 / 14001 / 45001', desc: 'International management system certification. Documentation, audits, certification body liaison.', weeks: '8–16 weeks', href: '/services' },
+  { title: 'CDSCO', sub: 'Drug & Medical Device License', desc: 'Registration of medical devices, drugs and cosmetics under CDSCO / MDR 2017.', weeks: '12–20 weeks', href: '/services' },
 ];
 
 const PROCESS = [

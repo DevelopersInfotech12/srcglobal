@@ -101,7 +101,7 @@ export default function HeroSection() {
 
             <div className="mb-8 flex flex-wrap gap-3">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold tracking-wide transition-opacity hover:opacity-80"
                 style={{ background: COLORS.gold, color: "#fff", borderRadius: 4, fontFamily: 'var(--font-body)' }}
               >
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 </svg>
               </a>
               <a
-                href="#services"
+                href="/services"
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold tracking-wide transition-opacity hover:opacity-70"
                 style={{ border: `1px solid #fff`, color: COLORS.goldLight, borderRadius: 4 }}
               >

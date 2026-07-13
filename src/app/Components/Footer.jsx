@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const SERVICES = [
-  { label: 'BIS Certification', href: '/services/bis' },
-  { label: 'EPR Registration', href: '/services/epr' },
-  { label: 'WPC-ETA Approval', href: '/services/wpc' },
-  { label: 'TEC / MTCTE', href: '/services/tec' },
-  { label: 'BEE Registration', href: '/services/bee' },
-  { label: 'LMPC Registration', href: '/services/lmpc' },
-  { label: 'ISO Certification', href: '/services/iso' },
-  { label: 'CDSCO / Drug License', href: '/services/cdsco' },
+  { label: 'BIS Certification', href: '/services' },
+  { label: 'EPR Registration', href: '/services' },
+  { label: 'WPC-ETA Approval', href: '/services' },
+  { label: 'TEC / MTCTE', href: '/services' },
+  { label: 'BEE Registration', href: '/services' },
+  { label: 'LMPC Registration', href: '/services' },
+  { label: 'ISO Certification', href: '/services' },
+  { label: 'CDSCO / Drug License', href: '/services' },
 ];
 
 const QUICK = [

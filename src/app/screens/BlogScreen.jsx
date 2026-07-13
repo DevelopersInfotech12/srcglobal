@@ -2,24 +2,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import PageHero from '../Components/PageHero';
+import { BLOGS as RAW_BLOGS } from '../blog/blogData';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
-const BLOGS = [
-  { tag: 'BIS Certification', date: 'Apr 28, 2025', read: '6 min', title: 'BIS CRS Registration: What Every Electronics Importer Must Know in 2025', excerpt: 'Mandatory for 70+ product categories, CRS registration can make or break your India market entry. Step-by-step guide.', img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80', href: '/blog/bis-crs', featured: true },
-  { tag: 'EPR', date: 'Apr 15, 2025', read: '5 min', title: 'EPR Registration for E-Waste: A Complete Compliance Roadmap', excerpt: 'CPCB\'s EPR rules now apply to all producers, importers, and brand owners of electronic equipment.', img: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80', href: '/blog/epr' },
-  { tag: 'WPC / ETA', date: 'Mar 30, 2025', read: '4 min', title: 'WPC ETA Approval for Wireless Devices: Timelines, Docs & Common Pitfalls', excerpt: 'Missing ETA approval is one of the top reasons wireless products get held at Indian customs.', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', href: '/blog/wpc' },
-  { tag: 'ISO Certification', date: 'Mar 12, 2025', read: '7 min', title: 'ISO 9001:2015 Certification: Is Your Business Actually Ready?', excerpt: 'Most organizations underestimate the documentation gap. Here\'s a practical readiness checklist.', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80', href: '/blog/iso' },
-  { tag: 'BEE', date: 'Feb 28, 2025', read: '5 min', title: 'BEE Star Rating: What Changed in 2025 and How It Affects Your Product', excerpt: 'BEE revised energy efficiency norms for ACs and refrigerators. New minimum star ratings apply from July 2025.', img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80', href: '/blog/bee' },
-  { tag: 'LMPC', date: 'Feb 10, 2025', read: '4 min', title: 'LMPC Importer Licence: The Overlooked Requirement That Stops Shipments', excerpt: 'Hundreds of import consignments are cleared incorrectly every year. Understanding LMPC before your first import.', img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80', href: '/blog/lmpc' },
-];
+// Map real blogData.js entries (source of truth for slugs) into the shape this screen renders.
+const BLOGS = RAW_BLOGS.map(b => ({
+  tag: b.tag,
+  date: b.date,
+  read: b.readTime,
+  title: b.title,
+  excerpt: b.excerpt,
+  img: b.img,
+  href: `/blog/${b.slug}`,
+  featured: !!b.featured,
+}));
 
-const TAGS = ['All', 'BIS Certification', 'EPR', 'WPC / ETA', 'ISO Certification', 'BEE', 'LMPC', 'CDSCO', 'TEC'];
+const TAGS = ['All', ...Array.from(new Set(RAW_BLOGS.map(b => b.tag)))];
 
 export default function BlogScreen() {
-  const [featured, ...rest] = BLOGS;
+  const featured = BLOGS.find(b => b.featured) || BLOGS[0];
+  const rest = BLOGS.filter(b => b !== featured);
 
   return (
     <>
       {/* Hero */}
+      <Navbar/>
       <PageHero
         eyebrow="Knowledge Hub"
         title="Insights & Regulatory"
@@ -111,6 +119,7 @@ export default function BlogScreen() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
