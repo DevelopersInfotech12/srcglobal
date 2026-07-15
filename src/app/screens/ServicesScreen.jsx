@@ -216,7 +216,9 @@ export default function ServicesScreen() {
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '72px', fontWeight: 700, color: 'var(--border-subtle)', position: 'absolute', top: '1rem', right: '1.5rem', lineHeight: 1 }}>{String(i + 1).padStart(2, '0')}</div>
                 <div style={{ fontSize: '32px', marginBottom: '1rem' }}>{s.icon}</div>
                 <div style={{ fontSize: '11px', color: 'var(--gold)', letterSpacing: '0.22em', fontWeight: 700, textTransform: 'uppercase', marginBottom: '6px', fontFamily: 'var(--font-body)' }}>{s.sub}</div>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1rem' }}>{s.title}</h3>
+                <Link href={`/${s.slug}`} style={{ textDecoration: 'none' }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '26px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1rem' }}>{s.title}</h3>
+                </Link>
                 <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.75, marginBottom: '1.5rem', fontWeight: 700, fontFamily: 'var(--font-body)' }}>{s.desc}</p>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '2rem' }}>
                   {s.features.map(f => (
@@ -227,7 +229,7 @@ export default function ServicesScreen() {
                 </ul>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span style={{ fontSize: '10px', fontWeight: 600, padding: '4px 10px', background: 'var(--gold-pale)', color: 'var(--gold-dark)', borderRadius: '1px', letterSpacing: '0.05em', fontFamily: 'var(--font-body)' }}>⏱ {s.weeks}</span>
-                  <Link href="/contact" style={{ fontSize: '11px', color: 'var(--gold)', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-body)' }}>Get Started →</Link>
+                  <Link href={`/${s.slug}`} style={{ fontSize: '11px', color: 'var(--gold)', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'var(--font-body)' }}>Get Started →</Link>
                 </div>
               </div>
             ))}

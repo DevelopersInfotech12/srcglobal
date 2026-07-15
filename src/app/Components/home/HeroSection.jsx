@@ -19,16 +19,16 @@ const SVC_COLOR = { bg: "#E8470A", text: "#ffffff" };
 const SERVICE_COLORS = Array(10).fill(SVC_COLOR);
 
 const services = [
-  { name: "BIS — CRS", short: "CRS", desc: "Compulsory Registration Scheme", icon: "🛡️", img: "/bis-crs.png", imgMobile: "/bis-crsmob.png" },
-  { name: "BIS — ISI", short: "ISI", desc: "Indian Standards Institute Mark", icon: "✅", img: "/bis-isi.png", imgMobile: "/bis-isimob.png" },
-  { name: "WPC — ETA", short: "WPC", desc: "Wireless Planning & Coordination", icon: "📡", img: "/wpc-eta.png", imgMobile: "/wpc-etamob.png" },
-  { name: "Testing", short: "TEST", desc: "Product & Safety Testing", icon: "🔬", img: "/testing.png", imgMobile: "/testingmob.png" },
-  { name: "BEE", short: "BEE", desc: "Bureau of Energy Efficiency", icon: "⚡", img: "/bee.png", imgMobile: "/beemob.png" },
-  { name: "ISO", short: "ISO", desc: "International Standards", icon: "🌐", img: "/iso.png", imgMobile: "/isomob.png" },
-  { name: "EPR", short: "EPR", desc: "Extended Producer Responsibility", icon: "♻️", img: "/epr.png", imgMobile: "/eprmob.png" },
-  { name: "TEC / MTCTE", short: "TEC", desc: "Telecom Equipment Certification", icon: "📶", img: "/tec.png", imgMobile: "/tecmob.png" },
-  { name: "LMPC", short: "LMPC", desc: "Legal Metrology Packaged Commodities", icon: "⚖️", img: "/lmpc.png", imgMobile: "/lmpcmob.png" },
-  { name: "CDSCO", short: "CDSCO", desc: "Drug & Medical Device License", icon: "💊", img: "/cdsco.png", imgMobile: "/cdscomob.png" },
+  { name: "BIS — CRS", short: "CRS", desc: "Compulsory Registration Scheme", icon: "🛡️", logo: "/bis-crslogo.png", img: "/bis-crs.png", imgMobile: "/bis-crsmob.png" },
+  { name: "BIS — ISI", short: "ISI", desc: "Indian Standards Institute Mark", icon: "✅", logo: "/isologo.png", img: "/bis-isi.png", imgMobile: "/bis-isimob.png" },
+  { name: "WPC — ETA", short: "WPC", desc: "Wireless Planning & Coordination", icon: "📡", logo: "/wpclogo.png", img: "/wpc-eta.png", imgMobile: "/wpc-etamob.png" },
+  { name: "Testing", short: "TEST", desc: "Product & Safety Testing", icon: "🔬", logo: "/testinglogo.png", img: "/testing.png", imgMobile: "/testingmob.png" },
+  { name: "BEE", short: "BEE", desc: "Bureau of Energy Efficiency", icon: "⚡", logo: "/beelogo.png", img: "/bee.png", imgMobile: "/beemob.png" },
+  { name: "ISO", short: "ISO", desc: "International Standards", icon: "🌐", logo: "/isologo.png", img: "/iso.png", imgMobile: "/isomob.png" },
+  { name: "EPR", short: "EPR", desc: "Extended Producer Responsibility", icon: "♻️", logo: "/eprlogo.png", img: "/epr.png", imgMobile: "/eprmob.png" },
+  { name: "TEC / MTCTE", short: "TEC", desc: "Telecom Equipment Certification", icon: "📶", logo: "/teclogo.png", img: "/tec.png", imgMobile: "/tecmob.png" },
+  { name: "LMPC", short: "LMPC", desc: "Legal Metrology Packaged Commodities", icon: "⚖️", logo: "/lmpclogo.png", img: "/lmpc.png", imgMobile: "/lmpcmob.png" },
+  { name: "CDSCO", short: "CDSCO", desc: "Drug & Medical Device License", icon: "💊", logo: "/cdscologo.png", img: "/cdsco.png", imgMobile: "/cdscomob.png" },
 ];
 
 const stats = [
@@ -123,7 +123,7 @@ export default function HeroSection() {
           {/* COL 2 */}
           <div className="flex flex-col gap-0">
 
-            {/* Pills row — each has its own color, active = full opacity, inactive = 55% opacity */}
+            {/* Pills row */}
             <div
               className="grid grid-cols-4 gap-1 rounded-t-2xl px-2 py-2 sm:flex sm:flex-wrap sm:items-center sm:gap-1.5 sm:px-3 sm:py-2"
               style={{ background: COLORS.surface, border: `1px solid ${COLORS.border}`, borderBottom: "none" }}
@@ -147,17 +147,21 @@ export default function HeroSection() {
                       border: "none",
                       transition: "opacity 0.2s, box-shadow 0.2s, transform 0.15s",
                       transform: isHovered && !isActive ? "scale(1.05)" : "scale(1)",
-                      // fontFamily: 'var(--font-body)'
                     }}
                   >
-                    <span className="text-xs leading-none sm:text-sm">{s.icon}</span>
+                    <img
+                      src={s.logo}
+                      alt={`${s.name} logo`}
+                      className="h-3.5 w-3.5 flex-shrink-0 rounded-sm object-contain sm:h-4 sm:w-4"
+                      onError={(e) => { e.currentTarget.style.display = "none"; }}
+                    />
                     <span className="font-display  truncate">{s.name}</span>
                   </button>
                 );
               })}
             </div>
 
-            {/* Image — aspect-ratio instead of fixed minHeight so it never crops/cuts on narrow screens */}
+            {/* Image */}
             <div
               className="relative overflow-hidden rounded-b-2xl aspect-[4/5] sm:aspect-[16/11]"
               style={{ border: `1px solid ${COLORS.border}`, borderTop: "none" }}
@@ -179,9 +183,8 @@ export default function HeroSection() {
                 style={{ background: "linear-gradient(to top, #1C120988 0%, transparent 55%)" }}
               />
 
-              {/* Top-right badge — smaller on mobile so it doesn't sit on top of the title */}
               <div
-                className="absolute right-2 top-2 rounded px-2 py-1 text-center text-[10px] sm:right-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-xs"
+                className="absolute right-2 top-2 flex items-center gap-1.5 rounded px-2 py-1 text-center text-[10px] sm:right-3 sm:top-3 sm:px-3 sm:py-1.5 sm:text-xs"
                 style={{
                   background: `${SERVICE_COLORS[active].bg}CC`,
                   border: `1px solid ${SERVICE_COLORS[active].bg}`,
@@ -190,11 +193,18 @@ export default function HeroSection() {
                   transition: "background 0.3s",
                 }}
               >
-                <p className="text-sm font-black sm:text-base">{svc.short}</p>
-                <p style={{ fontSize: 9, opacity: 0.75 }}>Certified</p>
+                <img
+                  src={svc.logo}
+                  alt={`${svc.name} logo`}
+                  className="h-4 w-4 rounded-sm object-contain sm:h-5 sm:w-5"
+                  onError={(e) => { e.currentTarget.style.display = "none"; }}
+                />
+                <div>
+                  <p className="text-sm font-black sm:text-base">{svc.short}</p>
+                  <p style={{ fontSize: 9, opacity: 0.75 }}>Certified</p>
+                </div>
               </div>
 
-              {/* Floating service detail card — full-width inset on mobile, no more mt-16 fighting bottom-1 */}
               <div
                 className="absolute bottom-2 left-2 w-[310px] sm:w-[500px] mx-auto right-2 rounded-xl p-2 transition-all duration-300 sm:left-4 sm:right-4 sm:bottom-3"
                 style={{
@@ -205,7 +215,15 @@ export default function HeroSection() {
                   transform: fading ? "translateY(6px)" : "translateY(0)",
                 }}
               >
-                <p className="mb-1 text-[12px] font-extrabold sm:text-[13px]" style={{ color: "#ff5e24", fontWeight: 800, fontFamily: 'system-ui, sans-serif' }}>{svc.icon} {svc.name}</p>
+                <p className="mb-1 flex items-center gap-1.5 text-[12px] font-extrabold sm:text-[13px]" style={{ color: "#ff5e24", fontWeight: 800, fontFamily: 'system-ui, sans-serif' }}>
+                  <img
+                    src={svc.logo}
+                    alt={`${svc.name} logo`}
+                    className="h-4 w-4 rounded-sm object-contain"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
+                  {svc.name}
+                </p>
                 <p className="mb-2 text-[9px] sm:text-[10px]" style={{ color: "#ffffffbe", fontFamily: 'var(--font-body)' }}>{svc.desc}</p>
                 <div className="h-px mb-1" style={{ background: COLORS.border }} />
                 <ul className="grid grid-cols-1 gap-x-3 gap-y-1 text-[10px] sm:grid-cols-2 sm:text-[11px]" style={{ color: COLORS.muted }}>
@@ -217,7 +235,6 @@ export default function HeroSection() {
                 </ul>
               </div>
 
-              {/* Progress dots */}
               <div className="absolute bottom-24 left-1/2 flex -translate-x-1/2 flex-row gap-1.5 sm:bottom-28">
                 {services.map((_, i) => (
                   <div
@@ -235,7 +252,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* BOTTOM MARQUEE STRIP — cards get their service color as a left accent bar */}
+        {/* BOTTOM MARQUEE STRIP */}
         <div
           className="relative mt-14 overflow-hidden rounded-2xl"
           style={{ border: `1px solid ${COLORS.border}`, background: COLORS.surface }}
@@ -249,12 +266,16 @@ export default function HeroSection() {
                   className="flex flex-shrink-0 items-center gap-3 rounded-xl px-4 py-2.5 overflow-hidden relative"
                   style={{ border: `1px solid ${COLORS.border}`, background: COLORS.gold, }}
                 >
-                  {/* Left accent bar */}
                   <div
                     className="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl"
                     style={{ background: sc.bg }}
                   />
-                  <span className="text-lg ml-1">{s.icon}</span>
+                  <img
+                    src={s.logo}
+                    alt={`${s.name} logo`}
+                    className="h-6 w-6 flex-shrink-0 rounded-md object-contain bg-white/10 p-0.5 ml-1"
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  />
                   <div>
                     <p className="text-xs font-bold font-display" style={{ color: "#ffffff" }}>{s.name}</p>
                     <p style={{ fontSize: 11, color: "#ffffff9f" }} className="font-display font-bold">{s.desc}</p>
@@ -275,6 +296,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-
-

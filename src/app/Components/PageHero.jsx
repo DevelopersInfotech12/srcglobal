@@ -47,7 +47,7 @@ export default function PageHero({
 
   return (
     <section
-      className="relative w-full overflow-hidden h-[72vh] min-h-[520px] lg:h-[72vh] lg:min-h-[220px]"
+      className="relative w-full overflow-hidden h-[60vh] min-h-[520px] lg:h-[65vh] lg:min-h-[220px]"
       style={{ background: C.navyDark }}
     >
       {/* Background image */}
@@ -74,11 +74,11 @@ export default function PageHero({
       {/* Floating badge, top-right */}
       {badge && (
         <div
-          className="absolute right-5 top-6 z-20 rounded px-3 py-1.5 text-center text-xs backdrop-blur-md"
+          className="hidden sm:block absolute right-5 top-6 z-20 rounded px-3 py-1.5 text-center text-xs backdrop-blur-md"
           style={{ background: `${C.orange}CC`, border: `1px solid ${C.orange}`, color: C.white }}
         >
-          <p className="text-base font-black">{badge.label}</p>
-          {badge.sub && <p style={{ fontSize: 10, opacity: 0.8 }}>{badge.sub}</p>}
+          <p className="text-xs font-black leading-tight">{badge.label}</p>
+          {badge.sub && <p className="mt-2 sm:mt-0 leading-snug sm:leading-normal text-[10px] sm:text-[12px] " style={{ opacity: 0.8 }}>{badge.sub}</p>}
         </div>
       )}
 

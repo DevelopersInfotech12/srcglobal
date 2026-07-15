@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { Label, GoldBtn, Divider, SectionHeading } from './HomeAtoms';
 
 const SERVICES = [
-  { title: 'BIS — CRS', sub: 'Compulsory Registration Scheme', desc: 'Mandatory for 70+ electronics & IT product categories. Lab coordination, portal filing, follow-up handled end-to-end.', weeks: '4–8 weeks', href: '/services' },
-  { title: 'EPR', sub: 'Extended Producer Responsibility', desc: 'E-waste, plastics & battery EPR registration with CPCB. Full documentation and annual compliance reporting.', weeks: '3–6 weeks', href: '/services' },
-  { title: 'WPC — ETA', sub: 'Wireless Equipment Type Approval', desc: 'For Wi-Fi, Bluetooth, GPS and all wireless devices. Lab testing to WPC portal — fully managed.', weeks: '6–10 weeks', href: '/services' },
-  { title: 'TEC / MTCTE', sub: 'Telecom Equipment Certification', desc: 'Mandatory under DoT for telecom products. Portal coordination, lab liaison, compliance review.', weeks: '8–12 weeks', href: '/services' },
-  { title: 'BEE', sub: 'Bureau of Energy Efficiency', desc: 'Star labelling and mandatory registration for energy-consuming products across 24+ categories.', weeks: '4–8 weeks', href: '/services' },
-  { title: 'LMPC', sub: 'Legal Metrology Packaged Commodities', desc: 'Import licence and product label compliance under Legal Metrology Act for importers.', weeks: '2–4 weeks', href: '/services' },
-  { title: 'ISO Certification', sub: 'ISO 9001 / 14001 / 45001', desc: 'International management system certification. Documentation, audits, certification body liaison.', weeks: '8–16 weeks', href: '/services' },
-  { title: 'CDSCO', sub: 'Drug & Medical Device License', desc: 'Registration of medical devices, drugs and cosmetics under CDSCO / MDR 2017.', weeks: '12–20 weeks', href: '/services' },
+  { title: 'BIS — CRS', sub: 'Compulsory Registration Scheme', desc: 'Mandatory for 70+ electronics & IT product categories. Lab coordination, portal filing, follow-up handled end-to-end.', weeks: '4–8 weeks', href: '/bis-crs' },
+  { title: 'EPR', sub: 'Extended Producer Responsibility', desc: 'E-waste, plastics & battery EPR registration with CPCB. Full documentation and annual compliance reporting.', weeks: '3–6 weeks', href: '/epr' },
+  { title: 'WPC — ETA', sub: 'Wireless Equipment Type Approval', desc: 'For Wi-Fi, Bluetooth, GPS and all wireless devices. Lab testing to WPC portal — fully managed.', weeks: '6–10 weeks', href: '/wpc' },
+  { title: 'TEC / MTCTE', sub: 'Telecom Equipment Certification', desc: 'Mandatory under DoT for telecom products. Portal coordination, lab liaison, compliance review.', weeks: '8–12 weeks', href: '/tec' },
+  { title: 'BEE', sub: 'Bureau of Energy Efficiency', desc: 'Star labelling and mandatory registration for energy-consuming products across 24+ categories.', weeks: '4–8 weeks', href: '/bee' },
+  { title: 'LMPC', sub: 'Legal Metrology Packaged Commodities', desc: 'Import licence and product label compliance under Legal Metrology Act for importers.', weeks: '2–4 weeks', href: '/lmpc' },
+  { title: 'ISO Certification', sub: 'ISO 9001 / 14001 / 45001', desc: 'International management system certification. Documentation, audits, certification body liaison.', weeks: '8–16 weeks', href: '/iso' },
+  { title: 'CDSCO', sub: 'Drug & Medical Device License', desc: 'Registration of medical devices, drugs and cosmetics under CDSCO / MDR 2017.', weeks: '12–20 weeks', href: '/cdsco' },
 ];
 
 const PROCESS = [
@@ -33,7 +33,7 @@ export default function ServicesAndProcess() {
                 Our<br />Services
               </SectionHeading>
               <Divider dark />
-              <p className='text-justify' style={{ fontSize: '14px', color: '#4a4438', lineHeight: 1.8, marginBottom: '2rem', fontFamily: 'var(--font-body)', fontWeight:'700' }}>
+              <p className='text-justify' style={{ fontSize: '14px', color: '#4a4438', lineHeight: 1.8, marginBottom: '2rem', fontFamily: 'var(--font-body)', fontWeight: '700' }}>
                 End-to-end certification support for every major Indian regulatory framework. We manage everything so you can focus on your business.
               </p>
               <GoldBtn href="/services" >All Services →</GoldBtn>
@@ -59,7 +59,7 @@ export default function ServicesAndProcess() {
                     <div>
                       <div style={{ fontSize: '11px', letterSpacing: '0.22em', color: 'var(--gold)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '5px', fontFamily: 'var(--font-body)' }}>{s.sub}</div>
                       <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '21px', fontWeight: 700, color: '#1B2A4A', marginBottom: '0.5rem' }}>{s.title}</h3>
-                      <p style={{ fontSize: '13px', color: '#6b675c', lineHeight: 1.7,fontWeight:'700', fontFamily: 'var(--font-body)' }}>{s.desc}</p>
+                      <p style={{ fontSize: '13px', color: '#6b675c', lineHeight: 1.7, fontWeight: '700', fontFamily: 'var(--font-body)' }}>{s.desc}</p>
                     </div>
                     <div style={{ textAlign: 'right', paddingTop: '2px' }}>
                       <span style={{ fontSize: '10px', fontWeight: 600, color: 'var(--gold-dark)', background: '#f8edcf', padding: '4px 12px', borderRadius: '1px', whiteSpace: 'nowrap', fontFamily: 'var(--font-body)' }}>{s.weeks}</span>
