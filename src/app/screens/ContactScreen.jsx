@@ -125,7 +125,7 @@ export default function ContactScreen() {
               <p style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '6px' }}>Prefer WhatsApp?</p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '1rem' }}>Message us directly on WhatsApp for the fastest response.</p>
               <a
-                href="https://wa.me/919891229135?text=Hi SRC Global, I need help with a certification."
+                href="https://wa.me/918383032381?text=Hi SRC Global, I need help with a certification."
                 target="_blank" rel="noopener noreferrer"
                 style={{ display: 'inline-block', background: '#25d366', color: '#fff', padding: '10px 24px', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textDecoration: 'none', textTransform: 'uppercase', borderRadius: '2px' }}
               >

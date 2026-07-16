@@ -18,7 +18,7 @@ const QUICK = [
   { label: 'About Us', href: '/about' },
   { label: 'All Services', href: '/services' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Careers', href: '/careers' },
+  // { label: 'Careers', href: '/careers' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -117,8 +117,7 @@ export default function Footer() {
                 background: 'rgba(255,255,255,.06)', border: '1px solid rgba(201,146,28,.3)',
                 borderRight: 'none', color: '#fff', outline: 'none',
                 borderRadius: '2px 0 0 2px',
-              }}
-            />
+              }} />
             <button style={{
               background: 'var(--gold)', border: 'none', padding: '10px 16px',
               fontSize: '12px', color: '#fff', cursor: 'pointer', fontWeight: 600,
@@ -147,20 +146,25 @@ export default function Footer() {
         padding: '1.5rem',
         display: 'flex',
         flexWrap: 'wrap',
-        gap: '1rem',
-        justifyContent: 'space-between',
+        gap: '0.5rem',
+        justifyContent: 'center',
         alignItems: 'center',
         maxWidth: '1280px',
         margin: '4rem auto 0',
+        textAlign: 'center',
       }}>
-        <p style={{ fontSize: '12px', color: '#6b6050' }}>
-          © 2026 SRC Global Solutions—. All rights reserved.
+        <p style={{ fontSize: '12px', color: '#cec7bc' }}>
+          © 2026 SRC Global Solutions. All rights reserved.
+          {' | '}
+          <a
+            href="https://developersinfotech.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#c5c0b8', textDecoration: 'underline' }}
+          >
+            Developed by Developers Infotech Pvt Ltd
+          </a>
         </p>
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
-          {['Privacy Policy', 'Terms & Conditions'].map(t => (
-            <a key={t} href="#" style={{ fontSize: '12px', color: '#6b6050', textDecoration: 'none' }}>{t}</a>
-          ))}
-        </div>
       </div>
       <div style={{ height: '1.5rem' }} />
     </footer>

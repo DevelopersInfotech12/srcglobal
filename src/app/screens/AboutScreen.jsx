@@ -278,53 +278,6 @@ export default function AboutScreen() {
         </div>
       </section>
 
-      {/* ── 6. TIMELINE — DARK ── */}
-      <section ref={timelineRef} style={{ background: C.navy, padding: "7rem 1.5rem" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <Label>Our Growth</Label>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(34px, 3.8vw, 54px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.12, color: C.white }}>Key Milestones</h2>
-          </div>
-          <div style={{ display: "flex", position: "relative", overflowX: "auto", paddingBottom: "2rem" }}>
-            <div style={{ position: "absolute", top: "28px", left: "40px", right: "40px", height: "2px", background: `linear-gradient(90deg,rgba(232,71,10,0.2),${C.orange},rgba(232,71,10,0.2))` }} />
-            {MILESTONES.map((m, i) => (
-              <div key={m.year} onClick={() => setActiveMs(i)} style={{ flex: "1 0 140px", textAlign: "center", padding: "0 1rem", cursor: "pointer", minWidth: "120px" }}>
-                <div style={{ width: i === activeMs ? "24px" : "16px", height: i === activeMs ? "24px" : "16px", borderRadius: "50%", background: i === activeMs ? C.orange : C.navyMid, border: `3px solid ${i === activeMs ? C.orange : "rgba(232,71,10,0.4)"}`, margin: "0 auto 1.5rem", boxShadow: i === activeMs ? `0 0 16px rgba(232,71,10,0.6)` : "none", transition: "all 0.4s ease", position: "relative", zIndex: 1 }} />
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "20px", fontWeight: 700, color: i === activeMs ? C.orange : C.textMuted, marginBottom: "0.5rem", transition: "color 0.4s" }}>{m.year}</div>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: "12px", color: i === activeMs ? C.textLight : C.textMuted, lineHeight: 1.6, transition: "color 0.4s, opacity 0.4s", opacity: i === activeMs ? 1 : 0.55 }}>{m.event}</p>
-              </div>
-            ))}
-          </div>
-          <div style={{ marginTop: "2rem", background: C.orange, borderRadius: "8px", padding: "1.75rem 2rem", display: "flex", alignItems: "center", gap: "1.5rem" }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: "52px", fontWeight: 700, color: C.white, opacity: 0.25, lineHeight: 1, flexShrink: 0 }}>{MILESTONES[activeMs].year}</div>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: "16px", color: C.white, lineHeight: 1.7, fontWeight: 500 }}>{MILESTONES[activeMs].event}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. TEAM — LIGHT ── */}
-      <section ref={teamRef} className="section-light" style={{ padding: "7rem 1.5rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <Label>Meet the Experts</Label>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(34px, 3.8vw, 54px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.12, color: C.navy }}>The <span style={{ color: C.orange }}>SRC Global</span> Team</h2>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(240px,1fr))", gap: "1.5rem" }}>
-            {TEAM.map((t, i) => (
-              <div key={t.name} style={{ background: C.white, border: `1px solid rgba(27,42,74,0.08)`, borderRadius: "10px", padding: "2.5rem 2rem", textAlign: "center", boxShadow: "0 2px 16px rgba(27,42,74,0.07)", opacity: teamVis ? 1 : 0, transform: teamVis ? "none" : "translateY(40px)", transition: `opacity 0.6s ${i * 0.12}s, transform 0.6s ${i * 0.12}s`, position: "relative", overflow: "hidden" }}>
-                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", background: `linear-gradient(90deg,transparent,${C.orange},transparent)` }} />
-                <div style={{ width: "72px", height: "72px", borderRadius: "50%", background: `linear-gradient(135deg,${C.orange},${C.orangeDark})`, color: C.white, fontSize: "28px", fontFamily: "var(--font-display)", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.5rem", boxShadow: `0 4px 20px rgba(232,71,10,0.3)` }}>
-                  {t.icon}
-                </div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "22px", fontWeight: 700, color: C.navy, marginBottom: "4px" }}>{t.name}</h3>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: "11px", color: C.orange, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "1rem" }}>{t.role}</p>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: "13px", color: C.textMid, lineHeight: 1.75 }}>{t.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── 8. SERVICES PREVIEW — DARK ── */}
       <section ref={servRef} style={{ background: C.navy, padding: "7rem 1.5rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: "5rem", alignItems: "center" }}>

@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: 'Services', href: '/services', hasDropdown: true },
   { label: '✨ AI Advisor', href: '/ai-recommendation' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Careers', href: '/careers' },
+  // { label: 'Careers', href: '/careers' },
   { label: 'Contact', href: '/contact' },
 ];
 
