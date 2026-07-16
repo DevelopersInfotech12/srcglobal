@@ -99,8 +99,8 @@ export default function ContactScreen() {
           <div>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: "clamp(34px, 2.5vw, 30px)", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1.12, color: 'var(--text-primary)', marginBottom: '2rem' }}>Contact Information</h2>
             {[
-              { icon: '📞', label: 'Phone / WhatsApp', values: ['+91-9891229135', '+91-9540190334'] },
-              { icon: '✉', label: 'Email', values: ['✉ starindia.acc@gmail.com'] },
+              { icon: '📞', label: 'Phone / WhatsApp', values: ['+91-8383032381'] },
+              { icon: '✉', label: 'Email', values: ['✉ srcglobalsolutions@gmail.com'] },
 
               {
                 icon: '📍',

@@ -435,7 +435,7 @@ export function CtaBanner() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
           <GoldBtn href="/contact">Get Free Consultation</GoldBtn>
           <a href="tel:+919891229135" style={{ display: 'inline-block', padding: '13px 32px', fontSize: '12px', fontWeight: 600, letterSpacing: '0.15em', textDecoration: 'none', textTransform: 'uppercase', borderRadius: '2px', border: '1.5px solid rgba(201,146,28,.4)', color: 'var(--gold)' }}>
-            📞 +91-9891229135
+            📞 +91 95401 90334
           </a>
         </div>
       </div>

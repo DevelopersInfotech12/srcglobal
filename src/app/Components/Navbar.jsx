@@ -99,8 +99,8 @@ export default function Navbar() {
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Image src="/logo.png" alt="SRC Global logo" width={76} height={76} priority />
             <div>
-              <div style={{ fontWeight: 700, fontSize: '24px', color: '#222222', lineHeight: 1.1 }}>
-                SRC Global
+              <div style={{ fontWeight: 700, fontSize: '20px', color: '#222222', lineHeight: 1.1 }}>
+                SRC Global Solutions
               </div>
             </div>
           </Link>

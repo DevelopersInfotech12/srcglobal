@@ -89,7 +89,7 @@ export default function CareersScreen() {
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--text-muted)', marginTop: '1rem' }}>
-          Don&apos;t see a fit? Email your CV to <a href="mailto:starindia.acc@gmail.com" style={{ color: 'var(--gold)' }}>starindia.acc@gmail.com</a> with the role you&apos;d like.
+          Don&apos;t see a fit? Email your CV to <a href="mailto:srcglobalsolutions@gmail.com" style={{ color: 'var(--gold)' }}>srcglobalsolutions@gmail.com</a> with the role you&apos;d like.
         </p>
       </div>
     </>

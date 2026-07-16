@@ -22,7 +22,7 @@ const services = [
   { name: "BIS — CRS", short: "CRS", desc: "Compulsory Registration Scheme", icon: "🛡️", logo: "/bis-crslogo.png", img: "/bis-crs.png", imgMobile: "/bis-crsmob.png" },
   { name: "BIS — ISI", short: "ISI", desc: "Indian Standards Institute Mark", icon: "✅", logo: "/isologo.png", img: "/bis-isi.png", imgMobile: "/bis-isimob.png" },
   { name: "WPC — ETA", short: "WPC", desc: "Wireless Planning & Coordination", icon: "📡", logo: "/wpclogo.png", img: "/wpc-eta.png", imgMobile: "/wpc-etamob.png" },
-  { name: "Testing", short: "TEST", desc: "Product & Safety Testing", icon: "🔬", logo: "/testinglogo.png", img: "/testing.png", imgMobile: "/testingmob.png" },
+  { name: "Testing", short: "TEST", desc: "Product & Safety Testing", icon: "🔬", logo: "/testinglogo.png", img: "/testingmob.png", imgMobile: "/testingmob.png" },
   { name: "BEE", short: "BEE", desc: "Bureau of Energy Efficiency", icon: "⚡", logo: "/beelogo.png", img: "/bee.png", imgMobile: "/beemob.png" },
   { name: "ISO", short: "ISO", desc: "International Standards", icon: "🌐", logo: "/isologo.png", img: "/iso.png", imgMobile: "/isomob.png" },
   { name: "EPR", short: "EPR", desc: "Extended Producer Responsibility", icon: "♻️", logo: "/eprlogo.png", img: "/epr.png", imgMobile: "/eprmob.png" },
@@ -149,11 +149,15 @@ export default function HeroSection() {
                       transform: isHovered && !isActive ? "scale(1.05)" : "scale(1)",
                     }}
                   >
-                    <img
-                      src={s.logo}
-                      alt={`${s.name} logo`}
-                      className="h-3.5 w-3.5 flex-shrink-0 rounded-sm object-contain sm:h-4 sm:w-4"
-                      onError={(e) => { e.currentTarget.style.display = "none"; }}
+                    <span
+                      aria-hidden="true"
+                      className="flex-shrink-0 rounded-full"
+                      style={{
+                        width: 6,
+                        height: 6,
+                        background: sc.text,
+                        opacity: isActive ? 1 : 0.6,
+                      }}
                     />
                     <span className="font-display  truncate">{s.name}</span>
                   </button>
@@ -269,12 +273,6 @@ export default function HeroSection() {
                   <div
                     className="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl"
                     style={{ background: sc.bg }}
-                  />
-                  <img
-                    src={s.logo}
-                    alt={`${s.name} logo`}
-                    className="h-6 w-6 flex-shrink-0 rounded-md object-contain bg-white/10 p-0.5 ml-1"
-                    onError={(e) => { e.currentTarget.style.display = "none"; }}
                   />
                   <div>
                     <p className="text-xs font-bold font-display" style={{ color: "#ffffff" }}>{s.name}</p>

@@ -3,8 +3,8 @@ import { useState } from 'react';
 
 export default function WhatsAppWidget() {
   const [tooltip, setTooltip] = useState(true);
-  const phone = '919891229135';
-  const msg = encodeURIComponent('Hi SRC Global, I need help with a certification. Can you guide me?');
+  const phone = '918383032381';
+  const msg = encodeURIComponent('Hi SRC Global Solutions, I need help with a certification. Can you guide me?');
 
   return (
     <div style={{ position: 'fixed', bottom: '24px', right: '24px', zIndex: 999, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '8px' }}>

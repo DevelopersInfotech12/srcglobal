@@ -403,7 +403,7 @@ export default function BlogDetailClient({ blog, notFound }) {
           </div>
           <div className="cta-final-actions">
             <button className="cta-primary" onClick={() => router.push("/contact")}>Get Free Consultation</button>
-            <a href="tel:+919891229135" className="cta-tel">📞 +91-9891229135</a>
+            <a href="tel:+919891229135" className="cta-tel">📞 +91 95401 90334</a>
           </div>
         </div>
       </section>

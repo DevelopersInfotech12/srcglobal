@@ -31,9 +31,9 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1.25rem' }}>
-           <Image src="/logo.png" alt="SRC Global logo" width={76} height={76} priority />
+            <Image src="/logo.png" alt="SRC Global logo" width={70} height={70} priority />
             <div>
-              <div style={{ fontWeight: 700, fontSize: '22px', color: '#fff' }}>SRC Global</div>
+              <div style={{ fontWeight: 700, fontSize: '16px', color: '#fff' }}>SRC Global Solutions</div>
             </div>
           </div>
           <p style={{ fontSize: '13px', color: '#a89f8e', lineHeight: 1.7, maxWidth: '240px', marginBottom: '1.5rem' }}>
@@ -50,14 +50,14 @@ export default function Footer() {
             <div>
               📞{' '}
               <a href="tel:+919891229135" style={{ textDecoration: 'none' }}>
-                +91-9891229135
+                +91-8383032381
               </a>
             </div>
 
             <div>
               ✉{' '}
-              <a href="mailto:starindia.acc@gmail.com" style={{ textDecoration: 'none' }}>
-                starindia.acc@gmail.com
+              <a href="mailto:srcglobalsolutions@gmail.com" style={{ textDecoration: 'none' }}>
+                srcglobalsolutions@gmail.com
               </a>
             </div>
 
@@ -154,7 +154,7 @@ export default function Footer() {
         margin: '4rem auto 0',
       }}>
         <p style={{ fontSize: '12px', color: '#6b6050' }}>
-          © 2026 SRC Global — Star India Accreditation. All rights reserved.
+          © 2026 SRC Global Solutions—. All rights reserved.
         </p>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {['Privacy Policy', 'Terms & Conditions'].map(t => (

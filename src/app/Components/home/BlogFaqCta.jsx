@@ -5,9 +5,16 @@ import Link from 'next/link';
 import { Label, GoldBtn } from './HomeAtoms';
 
 const INDUSTRIES = [
-  'Electronics & IT', 'Telecom & IoT', 'Pharmaceuticals', 'FMCG',
-  'Automotive', 'Medical Devices', 'Textiles', 'Food & Beverages',
-  'Chemicals', 'Construction', 'Toys & Furniture', 'Energy & Power',
+  { name: 'Electronics & IT', href: '/bis-crs' },
+  { name: 'Telecom & IoT', href: '/wpc' },
+  { name: 'Pharmaceuticals', href: '/cdsco' },
+  { name: 'FMCG', href: '/epr' },
+  { name: 'Automotive', href: '/iso' },
+  { name: 'Construction', href: '/bis-isi' },
+  { name: 'Toys & Furniture', href: '/testing&certification' },
+  { name: 'Food & Beverages', href: '/lmpc' },
+  { name: 'Chemicals', href: '/tec' },
+  { name: 'Energy & Power', href: '/bee' },
 ];
 
 const getIndustryIcon = (name) => {
@@ -127,8 +134,9 @@ export default function BlogFaqCta() {
           scrollbarWidth: 'thin', scrollbarColor: 'var(--gold) #faf6ef',
         }}>
           {INDUSTRIES.map((ind, i) => (
-            <div
-              key={ind}
+            <Link
+              key={ind.name}
+              href={ind.href}
               className="ind-card"
               style={{
                 position: 'relative',
@@ -138,6 +146,8 @@ export default function BlogFaqCta() {
                 background: 'linear-gradient(135deg, rgba(201,146,28,0.25), rgba(201,146,28,0))',
                 cursor: 'pointer',
                 transition: 'transform .4s cubic-bezier(.2,.8,.2,1)',
+                textDecoration: 'none',
+                display: 'block',
               }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-10px) scale(1.02)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0) scale(1)'; }}
@@ -165,11 +175,11 @@ export default function BlogFaqCta() {
                   fontSize: '17px',
                   position: 'relative', zIndex: 1,
                 }}>
-                  {getIndustryIcon(ind)}
+                  {getIndustryIcon(ind.name)}
                 </div>
                 <div style={{ position: 'relative', zIndex: 1 }}>
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 700, color: '#1B2A4A', lineHeight: 1.3, display: 'block', marginBottom: '0.5rem' }}>
-                    {ind}
+                    {ind.name}
                   </span>
                   <span style={{
                     fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 700,
@@ -180,7 +190,7 @@ export default function BlogFaqCta() {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

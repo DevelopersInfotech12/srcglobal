@@ -359,29 +359,29 @@ const css = `
 
 export default function BISCRSScreen() {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const heroLeftRef  = useReveal();
-  const overviewRef  = useReveal();
-  const infoCardRef  = useReveal();
-  const statsRef     = useReveal({ stagger: true, baseDelay: 100 });
-  const typesTtlRef  = useReveal();
-  const typesRef     = useReveal({ stagger: true, baseDelay: 80 });
+  const heroLeftRef = useReveal();
+  const overviewRef = useReveal();
+  const infoCardRef = useReveal();
+  const statsRef = useReveal({ stagger: true, baseDelay: 100 });
+  const typesTtlRef = useReveal();
+  const typesRef = useReveal({ stagger: true, baseDelay: 80 });
 
-  const benefitsTtlRef  = useReveal();
-  const benefitsRef     = useReveal({ stagger: true, baseDelay: 75 });
-  const dstepsTtlRef    = useReveal();
-  const dstepsRef       = useReveal();
-  const crsDocsTtlRef   = useReveal();
-  const crsDocsRef      = useReveal({ stagger: true, baseDelay: 70 });
-  const tlcvTtlRef      = useReveal();
-  const tlcvRef         = useReveal();
+  const benefitsTtlRef = useReveal();
+  const benefitsRef = useReveal({ stagger: true, baseDelay: 75 });
+  const dstepsTtlRef = useReveal();
+  const dstepsRef = useReveal();
+  const crsDocsTtlRef = useReveal();
+  const crsDocsRef = useReveal({ stagger: true, baseDelay: 70 });
+  const tlcvTtlRef = useReveal();
+  const tlcvRef = useReveal();
 
-  const procTtlRef   = useReveal();
-  const bannerRef    = useReveal({ threshold: 0.1 });
-  const stepsRef     = useReveal({ stagger: true, baseDelay: 80 });
-  const docsTtlRef   = useReveal();
-  const docsRef      = useReveal({ stagger: true, baseDelay: 70 });
-  const faqRef       = useReveal({ stagger: true, baseDelay: 80 });
-  const ctaRef       = useReveal();
+  const procTtlRef = useReveal();
+  const bannerRef = useReveal({ threshold: 0.1 });
+  const stepsRef = useReveal({ stagger: true, baseDelay: 80 });
+  const docsTtlRef = useReveal();
+  const docsRef = useReveal({ stagger: true, baseDelay: 70 });
+  const faqRef = useReveal({ stagger: true, baseDelay: 80 });
+  const ctaRef = useReveal();
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: T.white, fontFamily: T.sans, color: T.body }}>
@@ -476,8 +476,8 @@ export default function BISCRSScreen() {
                   onMouseLeave={e => e.currentTarget.style.background = T.orange}>Start CRS Application →</button>
                 <div style={{ marginTop: 16, paddingTop: 16, borderTop: `1px solid ${T.border}`, display: "flex", flexDirection: "column", gap: 10 }}>
                   {[
-                    { icon: "📞", label: "Call Us", value: "+91-9891229135", href: "tel:+919891229135" },
-                    { icon: "✉", label: "Email Us", value: "starindia.acc@gmail.com", href: "mailto:starindia.acc@gmail.com" },
+                    { icon: "📞", label: "Call Us", value: "+91 95401 90334", href: "tel:+919891229135" },
+                    { icon: "✉", label: "Email Us", value: "srcglobalsolutions@gmail.com", href: "mailto:srcglobalsolutions@gmail.com" },
                   ].map(item => (
                     <a key={item.label} href={item.href} style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
                       <div style={{ width: 36, height: 36, borderRadius: 7, backgroundColor: T.tealLight, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, flexShrink: 0 }}>{item.icon}</div>
@@ -544,7 +544,7 @@ export default function BISCRSScreen() {
                   </div>
                   <h3 style={{ fontFamily: T.poppins, fontSize: 15.5, color: T.titleblue, fontWeight: 700, lineHeight: 1.3 }}>{b.title}</h3>
                 </div>
-                <p style={{ fontFamily: T.sans, fontSize: 14,textAlign: "justify", color: T.paradark, lineHeight: 1.8, margin: 0 }}>{b.desc}</p>
+                <p style={{ fontFamily: T.sans, fontSize: 14, textAlign: "justify", color: T.paradark, lineHeight: 1.8, margin: 0 }}>{b.desc}</p>
               </div>
             ))}
           </div>
@@ -596,7 +596,7 @@ export default function BISCRSScreen() {
                       <span style={{ fontSize: 20 }}>{s.icon}</span>
                       <h3 style={{ fontFamily: T.poppins, fontSize: 17, color: T.titleblue, fontWeight: 700 }}>{s.title}</h3>
                     </div>
-                    <p style={{ fontFamily: T.sans, fontSize: 14.5,textAlign: "justify", color: T.paradark, lineHeight: 1.8, marginBottom: 10 }}>{s.desc}</p>
+                    <p style={{ fontFamily: T.sans, fontSize: 14.5, textAlign: "justify", color: T.paradark, lineHeight: 1.8, marginBottom: 10 }}>{s.desc}</p>
                     <div style={{ background: T.tealLight, borderLeft: `3px solid ${T.teal}`, borderRadius: "0 6px 6px 0", padding: "8px 14px" }}>
                       <span style={{ fontFamily: T.poppins, fontSize: 12.5, color: T.tealMid, fontWeight: 600 }}>{s.tip}</span>
                     </div>
@@ -671,7 +671,7 @@ export default function BISCRSScreen() {
                 </div>
                 <div>
                   <div style={{ fontFamily: T.poppins, fontSize: 14, fontWeight: 700, color: "#fff", marginBottom: 5 }}>{doc.title}</div>
-                  <p style={{ fontFamily: T.sans,textAlign: "justify", fontSize: 13, color: "rgba(255,255,255,0.75)", lineHeight: 1.7, margin: 0 }}>{doc.desc}</p>
+                  <p style={{ fontFamily: T.sans, textAlign: "justify", fontSize: 13, color: "rgba(255,255,255,0.75)", lineHeight: 1.7, margin: 0 }}>{doc.desc}</p>
                 </div>
               </div>
             ))}
@@ -773,7 +773,7 @@ export default function BISCRSScreen() {
                       <div style={{ fontSize: 28, marginBottom: 10 }}>{vc.icon}</div>
                       <div style={{ fontFamily: T.poppins, fontSize: 22, fontWeight: 800, color: vc.color, marginBottom: 4 }}>{vc.value}</div>
                       <div style={{ fontFamily: T.poppins, fontSize: 13, color: T.titleblue, fontWeight: 700, marginBottom: 8 }}>{vc.title}</div>
-                      <p style={{ fontFamily: T.sans,textAlign: "justify", fontSize: 12.5, color: T.muted, lineHeight: 1.7, margin: 0 }}>{vc.desc}</p>
+                      <p style={{ fontFamily: T.sans, textAlign: "justify", fontSize: 12.5, color: T.muted, lineHeight: 1.7, margin: 0 }}>{vc.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -846,7 +846,7 @@ export default function BISCRSScreen() {
                 onMouseLeave={e => { e.currentTarget.style.background = T.orange; e.currentTarget.style.transform = "translateY(0)"; }}>Get Free Consultation</button>
               <a href="tel:+919891229135" style={{ padding: "13px 28px", border: `1.5px solid ${T.border}`, borderRadius: 6, fontFamily: T.poppins, fontSize: 14, fontWeight: 500, color: T.slate, display: "flex", alignItems: "center", justifyContent: "center", gap: 8, whiteSpace: "nowrap", background: T.white, transition: "border-color 0.2s" }}
                 onMouseEnter={e => e.currentTarget.style.borderColor = T.teal}
-                onMouseLeave={e => e.currentTarget.style.borderColor = T.border}>📞 +91-9891229135</a>
+                onMouseLeave={e => e.currentTarget.style.borderColor = T.border}>📞 +91 95401 90334</a>
             </div>
           </div>
         </div>
